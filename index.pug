@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+	meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+	meta(charset="UTF-8")
+	link(rel="stylesheet", href="style.css")
+	script(type='text/javascript', src='vue.js')
+	title VUE.js for LP
+body
+	#app
+		#wrapper
+			header
+				.container
+					div
+						h1 {{ title }}
+						p {{ content }}
+					div.header-img
+						img(src="header-img.png", v-bind:alt="headerIMG")
+					button.btn {{ ctaBtn1 }}
+			section.features
+				.container
+					h2 {{ featuresTitle }}
+					div.items
+						div.item.item1
+							p {{ firstItemTitle }}
+							span {{ firstItemContent }}
+						div.item.item1
+							p {{ secondItemTitle }}
+							span {{ secondItemContent }}
+						div.item.item1
+							p {{ thirdItemTitle }}
+							span {{ thirdItemContent }}
+				.img.img1
+			section.como
+				.img.img2
+				.container
+					div
+						h2 {{ comoTitle }}
+						p {{como1}}
+						p {{como2}}
+			section.cta
+				.container
+					h2 {{ ctaTitle }}
+					button.btn {{ ctaBtn2 }}
+			footer
+				.background
+				.container
+					.download
+						p {{ctaFooter}}
+						a(v-if="appStore", v-bind:href="appStore")
+							img(src="badge-app-store.png", alt="badge download app store")
+						a(v-if="playStore", v-bind:href="playStore")
+							img(src="badge-play-store.png", alt="badge download app store")
+	script(type='text/javascript', src='data.js')

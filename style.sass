@@ -1,0 +1,167 @@
+html, body
+	height: 100%
+	font-size: 10px
+body
+	background: #363636
+*
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+	font-family: sans-serif
+	transition: all ease 0.3s
+#wrapper
+	overflow-x: hidden
+header
+	position: relative
+	background: url(header.png) no-repeat center center
+	background-size: cover
+	margin: 0
+	min-height: calc(100vh - 100px)
+	height: auto
+	display: flex
+	align-items: center
+	.container
+		position: relative
+		width: 100%
+		max-width: 1200px
+		height: calc(100vh - 100px)
+		padding: 30px 10px
+		margin: 0 auto
+		display: flex
+		justify-content: space-between
+		align-items: center
+		div:first-child
+			width: 100%
+			max-width: 480px
+	h1
+		color: white
+		font-size: 6.6rem
+		line-height: 1
+	p
+		font-size: 2.4rem
+		color: #fff
+		line-height: 1.5
+	.btn
+		position: absolute
+		bottom: 0
+		left: 0
+		transform: translateY(50%)
+	.btn:hover
+		transform: scale(1.02) translateY(50%)
+section
+	position: relative
+	.container
+		width: 100%
+		width: 100%
+		max-width: 1200px
+		position: relative
+		margin: 0 auto
+		div.items
+			margin-top: 40px
+			display: flex
+			justify-content: flex-start
+			margin-left: 100px
+			div
+				max-width: 190px
+				margin-right: 40px
+	p
+		color: #fff
+		font-size: 3.2rem
+		font-weight: bold
+	span
+		display: block
+		margin-top: 10px
+		color: #fff
+		font-size: 1.6rem
+section.como
+	margin-top: 100px
+	display: flex
+	justify-content: flex-end
+	.container
+		display: flex
+		justify-content: flex-end
+		div
+			margin: 0
+			max-width: 870px
+			display: flex
+			flex-direction: column
+		p
+			font-size: 2.4rem
+			line-height: 1.5
+			font-weight: normal
+			width: 90%
+			margin-left: auto
+			margin-top: 20px
+section.cta
+	.container
+		text-align: center
+		.btn
+			margin-top: 40px
+footer
+	margin-top: 100px
+	min-height: 250px
+	position: relative
+	.background
+		position: absolute
+		height: 100%
+		width: 100%
+		top: 0
+		left: 0
+		z-index: -1
+		opacity: 0.25
+		background-image: linear-gradient(-180deg, #373737 0%, #5C008D 100%)
+	.container
+		width: 100%
+		min-height: 250px
+		max-width: 1120px
+		padding: 10px
+		margin: 0 auto
+		display: flex
+		align-items: center
+		.download
+			display: flex
+			align-items: center
+			p
+				color: #fff
+				font-size: 1.8rem
+				font-weight: normal
+			a
+				margin-left: 20px
+				img
+					max-width: 135px
+
+h2
+	margin-top: 150px
+	color: #fff
+	font-size: 6rem
+.img
+	width: 520px
+	height: 520px
+	border-radius: 100%
+	box-shadow: 0 20px 44px 0 rgba(0,0,0,0.50)
+	position: absolute
+	top: 0
+.img1
+	background: url(img1.png) no-repeat center center
+	background-size: cover
+	width: 520px
+	height: 520px
+	right: -200px
+.img2
+	background: url(img2.png) no-repeat center center
+	background-size: covers
+	width: 620px
+	height: 620px
+	left: -320px
+.btn
+	cursor: pointer
+	border: none
+	padding: 2.2rem 3.6rem
+	background: #F69F00
+	box-shadow: 0 6px 20px 0 rgba(0,0,0,0.30)
+	border-radius: 8px
+	color: #fff
+	font-size: 2.4rem
+.btn:hover
+	transform: scale(1.02)
+	box-shadow: 0 20px 50px 0 rgba(0,0,0,0.30)
