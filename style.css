@@ -15,6 +15,9 @@ body {
 #wrapper {
   overflow-x: hidden; }
 
+[v-cloak] {
+  display: none; }
+
 header {
   position: relative;
   background: url(header.png) no-repeat center center;

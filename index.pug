@@ -8,7 +8,7 @@ head
 	title VUE.js for LP
 body
 	#app
-		#wrapper
+		#wrapper(v-cloak)
 			header
 				.container
 					div
@@ -16,7 +16,8 @@ body
 						p {{ content }}
 					div.header-img
 						img(src="header-img.png", v-bind:alt="headerIMG")
-					button.btn {{ ctaBtn1 }}
+					a(href="sms:3040?body=TG")
+						button.btn {{ ctaBtn1 }}
 			section.features
 				.container
 					h2 {{ featuresTitle }}

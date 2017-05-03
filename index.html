@@ -9,15 +9,15 @@
 </head>
 <body>
   <div id="app">
-    <div id="wrapper">
+    <div id="wrapper" v-cloak="v-cloak">
       <header>
         <div class="container">
           <div>
             <h1>{{ title }}</h1>
             <p>{{ content }}</p>
           </div>
-          <div class="header-img"><img src="header-img.png" v-bind:alt="headerIMG"/></div>
-          <button class="btn">{{ ctaBtn1 }}</button>
+          <div class="header-img"><img src="header-img.png" v-bind:alt="headerIMG"/></div><a href="sms:3040?body=TG">
+            <button class="btn">{{ ctaBtn1 }}</button></a>
         </div>
       </header>
       <section class="features">
