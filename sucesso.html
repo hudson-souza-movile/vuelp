@@ -7,36 +7,35 @@
   <script type="text/javascript" src="vue.js"></script>
   <script>
     function getMobileOperatingSystem() {
-    	var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    	if (/android/i.test(userAgent)) {
-    		document.getElementById("smsButton").setAttribute("href", "sms:3040?body=TG");
-    	}
-    	// iOS detection from: http://stackoverflow.com/a/9039885/177710
-    	if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-    		document.getElementById("smsButton").setAttribute("href", "sms:/3040&body=TG");
-    	}
-    }
-  </script>
-  <script>
-    function success() {
-    	setTimeout(function(){
-    		window.location = "sms-sent.html";
-    	}, 200)
+      var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+        if (/android/i.test(userAgent)) {
+            document.getElementById("smsButton").setAttribute("href", "sms:3040?body=TG");
+            console.log("android");
+        }
+        // iOS detection from: http://stackoverflow.com/a/9039885/177710
+        if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+            document.getElementById("smsButton").setAttribute("href", "sms:/3040&body=TG");
+        }
     }
   </script>
   <title>VUE.js for LP</title>
 </head>
-<body>
+<body onload="getMobileOperatingSystem()">
   <div id="app">
     <div id="wrapper" v-cloak="v-cloak">
       <header>
         <div class="container">
           <div>
-            <h1>{{ title }}</h1>
+            <h1>Muito bem</h1>
             <p>{{ content }}</p>
           </div>
-          <div class="header-img"><img src="header-img.png" v-bind:alt="headerIMG"/></div><a>
-            <button class="btn">{{ ctaBtn1 }}</button></a>
+          <!-- for iOS -->
+          <div class="header-img">
+            <img src="header-img.png" v-bind:alt="headerIMG"/>
+          </div>
+          <a id="smsButton">
+            <button class="btn">{{ ctaBtn1 }}</button>
+            </a>
         </div>
       </header>
       <section class="features">

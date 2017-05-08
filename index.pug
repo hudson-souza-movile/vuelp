@@ -5,6 +5,23 @@ head
 	meta(charset="UTF-8")
 	link(rel="stylesheet", href="style.css")
 	script(type='text/javascript', src='vue.js')
+	script.
+		function getMobileOperatingSystem() {
+			var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+			if (/android/i.test(userAgent)) {
+				document.getElementById("smsButton").setAttribute("href", "sms:3040?body=TG");
+			}
+			// iOS detection from: http://stackoverflow.com/a/9039885/177710
+			if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+				document.getElementById("smsButton").setAttribute("href", "sms:/3040&body=TG");
+			}
+		}
+	script.
+		function success() {
+			setTimeout(function(){
+				window.location = "sms-sent.html";
+			}, 200)
+		}
 	title VUE.js for LP
 body
 	#app
@@ -16,7 +33,7 @@ body
 						p {{ content }}
 					div.header-img
 						img(src="header-img.png", v-bind:alt="headerIMG")
-					a(href="sms:/3040&body=TG")
+					a
 						button.btn {{ ctaBtn1 }}
 			section.features
 				.container
