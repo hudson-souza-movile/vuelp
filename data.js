@@ -3,7 +3,7 @@ new Vue({
     data: {
         // HEADER
         title:
-        'Educação aproxima seus horizontes!',
+        'Educação te ajuda a crescer sempre!',
         content:
         'O Vivo Educa tem mais de 200 cursos à sua disposição, classificados entre 8 categorias, para aprender no seu tempo.',
         headerIMG:
